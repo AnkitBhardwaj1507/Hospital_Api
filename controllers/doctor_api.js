@@ -18,7 +18,6 @@ module.exports.register = async function(req, res) {
                     doctor: doctor
                 }
             })
-            
         }else {
             //create doctor
             doctor = await Doctor.create({
@@ -37,7 +36,6 @@ module.exports.register = async function(req, res) {
     }catch(err) {
         // console.log(err);
         return res.status(401).json({
-            
             message: 'Internal Server Error',
         })
     }
