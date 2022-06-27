@@ -2,7 +2,11 @@
 const mongoose = require('mongoose');
 
 // connect to the database
-mongoose.connect('mongodb://localhost/hospital_api_db');
+mongoose.connect('mongodb+srv://AnkitMongo:Ankit512507@cluster0.3jfyx1n.mongodb.net/Hospital-Api?retryWrites=true&w=majority',
+{
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+});
 
 //acquire the connection
 const db = mongoose.connection;
